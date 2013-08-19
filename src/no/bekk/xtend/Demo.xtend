@@ -4,10 +4,9 @@ import static extension no.bekk.xtend.Persistence.*
 
 public class Demo {	
 	def static void main(String[] args) {
-		val navn = #["Holger Ludvigsen", "Ola Nordmann", "Kari Olsen", "Henrik Wingerei"]
+		val navn = #["Holger Ludvigsen", "Hans Hansen", "Kari Karidatter", "Henrik Wingerei"]
 		
 		val braFolk = navn.map[toPerson].filter[it.fornavn.startsWith('H')]
-			
 		println(braFolk)
 		
 		val ola = navn.get(1).toPerson
@@ -21,7 +20,7 @@ public class Demo {
 
 	def static toPerson(String str) {
 		val split = str.split(" ")
-		return new Person(split.get(0), split.get(1))
+		new Person(split.get(0), split.get(1))
 	}
 }
 
