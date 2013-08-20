@@ -7,7 +7,7 @@ public class Demo2 {
 		val braFolk = navn.map[toPerson].filter[it.fornavn.startsWith('H')]
 		println(braFolk)
 		
-		val ola = navn.get(1).toPerson
+		val hans = navn.get(1).toPerson
 		val kari = navn.get(2).toPerson
 	}
 	
